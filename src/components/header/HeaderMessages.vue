@@ -17,16 +17,14 @@
       <v-divider></v-divider>
 
       <v-list>
-        <v-list-item link dense>
+        <v-list-item link dense v-for="item in messages" :key="item.text">
           <v-list-item-avatar>
-            <v-img
-              src="https://randomuser.me/api/portraits/women/85.jpg"
-            ></v-img>
+            <v-img :src="item.avatar"></v-img>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title>Titulo</v-list-item-title>
-            <v-list-item-subtitle>Subtitulo</v-list-item-subtitle>
-            <v-list-item-subtitle>Time</v-list-item-subtitle>
+            <v-list-item-title>{{ item.username }}</v-list-item-title>
+            <v-list-item-subtitle>{{ item.text }}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{ item.time }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -35,7 +33,30 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    messages: [
+      {
+        username: "Carla Hernández",
+        text: "Hola buen día",
+        time: "10:30 AM",
+        avatar: "https://randomuser.me/api/portraits/women/85.jpg",
+      },
+      {
+        username: "Carla Hernández",
+        text: "Necesito el reporte",
+        time: "10:32 AM",
+        avatar: "https://randomuser.me/api/portraits/women/85.jpg",
+      },
+      {
+        username: "Carla Hernández",
+        text: "Espero su respuesta",
+        time: "10:33 AM",
+        avatar: "https://randomuser.me/api/portraits/women/85.jpg",
+      },
+    ],
+  }),
+};
 </script>
 
 <style>

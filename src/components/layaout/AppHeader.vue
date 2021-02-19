@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app dark flat>
+  <v-app-bar app flat class="white">
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
     <v-toolbar-title>Admin<strong>Pro</strong></v-toolbar-title>
     <v-spacer></v-spacer>

@@ -42,7 +42,7 @@
 export default {
   methods: {
     login() {
-      this.$router.push({ name: "DashboardPage" });
+      this.$router.push({ name: "HomePage" });
     },
   },
 };

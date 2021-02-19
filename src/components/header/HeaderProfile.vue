@@ -29,6 +29,7 @@
       </v-list>
       <v-divider></v-divider>
       <v-card-text>
+        <v-subheader>Profile</v-subheader>
         <v-list>
           <v-list-item link v-for="item in options" :key="item.name">
             <v-list-item-title> {{ item.name }} </v-list-item-title>

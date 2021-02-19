@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-toolbar flat class="transparent">
+      <v-toolbar flat dense class="transparent">
         <v-toolbar-title>Minimal</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-title>

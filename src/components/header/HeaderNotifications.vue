@@ -17,14 +17,14 @@
       <v-divider></v-divider>
 
       <v-list>
-        <v-list-item link dense>
+        <v-list-item link dense v-for="item in notifications" :key="item.title">
           <v-list-item-avatar>
-            <v-icon class="blue" dark> mdi-bell </v-icon>
+            <v-icon class="blue" dark> {{ item.icon }} </v-icon>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title>Titulo</v-list-item-title>
-            <v-list-item-subtitle>Subtitulo</v-list-item-subtitle>
-            <v-list-item-subtitle>Time</v-list-item-subtitle>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-subtitle>{{ item.subtitle }}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{ item.time }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -33,7 +33,30 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    notifications: [
+      {
+        title: "Evento nuevo",
+        subtitle: "Recordatorio de evento nuevo",
+        time: "10:30 AM",
+        icon: "mdi-calendar",
+      },
+      {
+        title: "Nueva configuración",
+        subtitle: "Recordatorio de configuración",
+        time: "10:30 AM",
+        icon: "mdi-cog",
+      },
+      {
+        title: "Nuevo registro",
+        subtitle: "Recordatorio de evento registro",
+        time: "10:30 AM",
+        icon: "mdi-bell",
+      },
+    ],
+  }),
+};
 </script>
 
 <style>

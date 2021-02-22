@@ -1,5 +1,6 @@
 <template>
-  <v-card>
+  <v-card elevation="0">
+    <span class="line"></span>
     <v-card-title>
       <div>
         <h3 class="headline">Reporte de ganancias</h3>

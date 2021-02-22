@@ -1,8 +1,8 @@
 <template>
   <v-card elevation="0">
+    <span class="line"></span>
     <v-card-text>
       <div class="d-flex align-center">
-        <span></span>
         <v-icon size="50"> mdi-cash-multiple </v-icon>
         <div class="ml-4">
           <h5 class="subtitle-1">Total de ingresos</h5>
@@ -17,5 +17,12 @@
 export default {};
 </script>
 
-<style>
+<style >
+.line {
+  border-left: 2px solid rgba(51, 149, 206, 0.972);
+  margin-top: 2rem;
+  position: absolute;
+  display: block;
+  height: 2rem;
+}
 </style>

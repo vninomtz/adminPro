@@ -1,5 +1,6 @@
 <template>
   <v-card elevation="0">
+    <span class="line"></span>
     <v-card-title class="headline"> Separación de visitas </v-card-title>
     <v-card-text class="pa-5">
       <v-row align="center" justify="center">

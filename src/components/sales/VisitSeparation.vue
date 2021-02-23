@@ -1,23 +1,32 @@
 <template>
-  <v-card elevation="0">
+  <v-card elevation="0" height="550" max-height="550">
     <span class="line"></span>
     <v-card-title class="headline"> Separación de visitas </v-card-title>
     <v-card-text class="pa-5">
-      <v-row align="center" justify="center">
-        <chart-visits style="max-width: 90%"></chart-visits>
-      </v-row>
-      <v-row align="center" justify="center">
-        <v-col cols="12" v-for="device in devices" :key="device.name">
-          <v-row align="center" justify="center" class="mx-3 my-3">
-            <span>{{ device.name }}</span>
-            <v-spacer></v-spacer>
-            <span>{{ device.percentage }}</span>
-          </v-row>
-          <v-row align="center" justify="center" class="mx-3">
-            <v-divider></v-divider>
-          </v-row>
-        </v-col>
-      </v-row>
+      <v-container>
+        <v-row align="center" justify="center">
+          <chart-visits style="max-width: 250px"></chart-visits>
+        </v-row>
+      </v-container>
+      <v-container>
+        <v-row align="center" justify="center">
+          <v-col
+            cols="12"
+            v-for="device in devices"
+            :key="device.name"
+            class="my-2"
+          >
+            <v-row align="center" justify="center">
+              <span>{{ device.name }}</span>
+              <v-spacer></v-spacer>
+              <span>{{ device.percentage }}</span>
+            </v-row>
+            <v-row align="center" justify="center">
+              <v-divider></v-divider>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-card-text>
   </v-card>
 </template>

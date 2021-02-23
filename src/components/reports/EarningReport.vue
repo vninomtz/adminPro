@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="0">
+  <v-card elevation="0" height="600" max-height="600">
     <span class="line"></span>
     <v-card-title>
       <div>
@@ -9,22 +9,25 @@
     </v-card-title>
     <v-container>
       <v-row align="center" justify="center" class="blue-grey lighten-4">
-        <v-col cols="10">
+        <v-col cols="9">
           <div class="d-flex flex-column">
             <span class="title">Julio 20202</span>
             <span class="subtitle-1">Ganancias totales</span>
           </div>
           <v-spacer></v-spacer>
         </v-col>
-        <v-col cols="2">
+        <v-col cols="3">
           <div>
-            <span class="headline green--text">$3000</span>
+            <span class="text-sm-h6 text-md-h6 text-lg-h4 green--text"
+              >$3000</span
+            >
           </div>
         </v-col>
       </v-row>
     </v-container>
     <v-card-text>
       <v-data-table
+        height="400"
         :headers="headers"
         :items="items"
         disable-filtering
@@ -92,6 +95,36 @@ export default {
         priority: "Medium",
         earnings: "200k",
         color: "blue",
+      },
+      {
+        user: {
+          name: "Carla Hernández",
+          avatar: "https://randomuser.me/api/portraits/women/85.jpg",
+          position: "Ingeniero de Software",
+        },
+        priority: "Low",
+        earnings: "200k",
+        color: "pink",
+      },
+      {
+        user: {
+          name: "Carla Hernández",
+          avatar: "https://randomuser.me/api/portraits/women/85.jpg",
+          position: "Ingeniero de Software",
+        },
+        priority: "Low",
+        earnings: "200k",
+        color: "pink",
+      },
+      {
+        user: {
+          name: "Carla Hernández",
+          avatar: "https://randomuser.me/api/portraits/women/85.jpg",
+          position: "Ingeniero de Software",
+        },
+        priority: "Low",
+        earnings: "200k",
+        color: "pink",
       },
       {
         user: {

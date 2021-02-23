@@ -8,11 +8,13 @@
   >
     <template v-slot:activator="{ on, attrs }">
       <v-btn icon v-bind="attrs" v-on="on">
-        <v-icon>mdi-bell</v-icon>
+        <v-badge dot>
+          <v-icon>mdi-bell</v-icon>
+        </v-badge>
       </v-btn>
     </template>
     <v-card>
-      <v-card-title> Notificaciones </v-card-title>
+      <v-card-title>Notificaciones</v-card-title>
 
       <v-divider></v-divider>
 

@@ -26,8 +26,8 @@
         </v-col>
       </v-row>
     </v-card-title>
-    <v-card-text>
-      <chart-sales></chart-sales>
+    <v-card-text class="pa-5">
+      <chart-sales class=""></chart-sales>
     </v-card-text>
   </v-card>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app v-model="drawer" dark permanent expand-on-hover>
+  <v-navigation-drawer app dark permanent :expand-on-hover="mini">
     <v-list>
       <v-list-item link class="pa-2">
         <v-list-item-avatar>
@@ -40,9 +40,14 @@
 <script>
 export default {
   data: () => ({
-    props: {},
-    drawer: false,
+    mini: true,
   }),
+  methods: {
+    updateStateDrawer() {
+      this.mini = !this.mini;
+      console.log("Entro");
+    },
+  },
 };
 </script>
 

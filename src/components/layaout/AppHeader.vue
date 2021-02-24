@@ -1,8 +1,6 @@
 <template>
   <v-app-bar app flat class="white">
-    <v-app-bar-nav-icon
-      @click.stop="$emit('update-drawer')"
-    ></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon @click.stop="changeDrawer"></v-app-bar-nav-icon>
     <v-toolbar-title>Admin<strong>Pro</strong></v-toolbar-title>
     <v-spacer></v-spacer>
     <header-notifications></header-notifications>
@@ -22,8 +20,8 @@ export default {
     "header-profile": HeaderProfile,
   },
   methods: {
-    printMsg: function () {
-      console.log("Entro");
+    changeDrawer() {
+      this.$emit("update-drawer");
     },
   },
 };

@@ -8,21 +8,32 @@
       </div>
       <v-spacer></v-spacer>
       <v-row no-gutters align="end" justify="end">
-        <v-col
-          class="d-flex flex-column justify-content-center"
-          cols="7"
-          sm="2"
-        >
-          <span class="headline">10368</span>
-          <span class="subtitle-1">Ganado</span>
+        <v-col class="d-flex justify-end" cols="7" sm="4" md="3">
+          <div class="d-inline-flex align-center text-left">
+            <span class="bullet blue"></span>
+            <div class="d-flex flex-column ml-2">
+              <span class="headline">10368</span>
+              <span class="subtitle-1 text--secondary">Ganado</span>
+            </div>
+          </div>
         </v-col>
-        <v-col class="d-flex flex-column" cols="7" sm="2">
-          <span class="headline">10368</span>
-          <span class="subtitle-1">Ganado</span>
+        <v-col class="d-flex justify-end" cols="7" sm="4" md="3">
+          <div class="d-inline-flex align-center text-left">
+            <span class="bullet red"></span>
+            <div class="d-flex flex-column ml-2">
+              <span class="headline">10368</span>
+              <span class="subtitle-1 text--secondary">Gastado</span>
+            </div>
+          </div>
         </v-col>
-        <v-col class="d-flex flex-column" cols="7" sm="2">
-          <span class="headline">10368</span>
-          <span class="subtitle-1">Ganado</span>
+        <v-col class="d-flex justify-end" cols="7" sm="4" md="3">
+          <div class="d-inline-flex align-center text-left">
+            <span class="bullet green"></span>
+            <div class="d-flex flex-column ml-2">
+              <span class="headline">10368</span>
+              <span class="subtitle-1 text--secondary">Vendido</span>
+            </div>
+          </div>
         </v-col>
       </v-row>
     </v-card-title>
@@ -59,4 +70,11 @@ export default {
 </script>
 
 <style>
+.bullet {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: -0.6rem;
+  border-radius: 50%;
+}
 </style>

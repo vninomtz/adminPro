@@ -1,5 +1,11 @@
 <template>
-  <v-navigation-drawer app dark permanent :expand-on-hover="mini">
+  <v-navigation-drawer
+    v-model="drawer"
+    app
+    dark
+    :permanent="!isMobile"
+    :expand-on-hover="expand"
+  >
     <v-list>
       <v-list-item link class="pa-2">
         <v-list-item-avatar>
@@ -40,13 +46,29 @@
 <script>
 export default {
   data: () => ({
-    mini: true,
+    drawer: false,
+    expand: true,
   }),
   methods: {
     updateStateDrawer() {
-      this.mini = !this.mini;
-      console.log("Entro");
+      if (this.isMobile) {
+        this.drawer = !this.drawer;
+      } else {
+        this.expand = !this.expand;
+      }
     },
+  },
+  computed: {
+    isMobile() {
+      if (this.$vuetify.breakpoint.name === "xs") {
+        this.expand = false;
+        return true;
+      } else {
+        this.expand = true;
+        return false;
+      }
+    },
+    isDrawerActive() {},
   },
 };
 </script>

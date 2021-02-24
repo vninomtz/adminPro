@@ -16,7 +16,7 @@
           </div>
           <v-spacer></v-spacer>
         </v-col>
-        <v-col cols="3">
+        <v-col cols="3" class="text-right">
           <div>
             <span class="text-sm-h6 text-md-h6 text-lg-h4 green--text"
               >$3000</span

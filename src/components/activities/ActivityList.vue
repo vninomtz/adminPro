@@ -7,7 +7,7 @@
       </div>
     </v-card-title>
     <v-card-text>
-      <v-virtual-scroll :items="items" height="420" :item-height="100">
+      <v-virtual-scroll :items="items" height="420" :item-height="120">
         <template v-slot:default="{ item }">
           <v-list-item link>
             <v-list-item-avatar width="60" height="60" class="mb-10">

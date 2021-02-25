@@ -51,6 +51,7 @@ export default {
       },
       tooltips: {
         mode: "index",
+        events: ["mousemove", "mouseout", "click", "touchstart", "touchmove"],
       },
       scales: {
         xAxes: [

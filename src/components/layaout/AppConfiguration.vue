@@ -34,8 +34,21 @@
     </div>
     <v-divider></v-divider>
     <div class="mx-5 mt-5">
-      <span>Color del topbar</span>
-      <v-switch label="Mini variant"></v-switch>
+      <span>Color del toolbar</span>
+      <v-item-group class="d-flex justify-space-around ma-3">
+        <v-item>
+          <v-avatar size="20" color="primary"></v-avatar>
+        </v-item>
+        <v-item>
+          <v-avatar size="20" color="secondary"></v-avatar>
+        </v-item>
+        <v-item>
+          <v-avatar size="20" color="success"></v-avatar>
+        </v-item>
+        <v-item>
+          <v-avatar size="20" color="warning"></v-avatar>
+        </v-item>
+      </v-item-group>
     </div>
     <v-divider></v-divider>
   </v-navigation-drawer>

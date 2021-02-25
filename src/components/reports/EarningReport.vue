@@ -34,6 +34,7 @@
         disable-pagination
         disable-sort
         hide-default-footer
+        @click:row="mensaje"
       >
         <template v-slot:[`item.user`]="{ item }">
           <v-list-item>
@@ -138,6 +139,11 @@ export default {
       },
     ],
   }),
+  methods: {
+    mensaje(item) {
+      console.log("Seleccion de item: " + item.color);
+    },
+  },
 };
 </script>
 

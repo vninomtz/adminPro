@@ -36,6 +36,9 @@
       <v-col cols="12" md="12" lg="6">
         <profile-card></profile-card>
       </v-col>
+      <v-col cols="12" md="12" lg="6">
+        <to-do></to-do>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -50,6 +53,7 @@ import EarningReport from "@/components/reports/EarningReport";
 import RecentComments from "@/components/activities/RecentComments";
 import ActivityList from "@/components/activities/ActivityList";
 import ProfileCard from "@/components/activities/ProfileCard";
+import ToDoList from "@/components/activities/ToDoList";
 export default {
   components: {
     "toolbar-navigation": ToolbarNavigation,
@@ -61,6 +65,7 @@ export default {
     "recent-comments": RecentComments,
     "activity-list": ActivityList,
     "profile-card": ProfileCard,
+    "to-do": ToDoList,
   },
   data: () => ({
     revenues: ["1", "2", "3", "4"],

@@ -39,6 +39,9 @@
       <v-col cols="12" md="12" lg="6">
         <to-do></to-do>
       </v-col>
+      <v-col cols="12" md="12" lg="6">
+        <master-table></master-table>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -54,6 +57,7 @@ import RecentComments from "@/components/activities/RecentComments";
 import ActivityList from "@/components/activities/ActivityList";
 import ProfileCard from "@/components/activities/ProfileCard";
 import ToDoList from "@/components/activities/ToDoList";
+import MasterTable from "@/components/activities/MasterTable";
 export default {
   components: {
     "toolbar-navigation": ToolbarNavigation,
@@ -66,6 +70,7 @@ export default {
     "activity-list": ActivityList,
     "profile-card": ProfileCard,
     "to-do": ToDoList,
+    "master-table": MasterTable,
   },
   data: () => ({
     revenues: ["1", "2", "3", "4"],

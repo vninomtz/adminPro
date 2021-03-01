@@ -23,13 +23,13 @@ const routes = [
         name: "HomePage",
         component: () => import("../views/HomePage.vue"),
       },
+      {
+        path: "/dashboard/users",
+        name: "Users",
+        component: () =>
+          import(/* webpackChunkName: "user" */ "../views/UsersPage.vue"),
+      },
     ],
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
 ];
 

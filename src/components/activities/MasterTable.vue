@@ -8,7 +8,7 @@
       </div>
     </v-card-title>
     <v-card-text>
-      <v-btn @click="showSelected">Mostrar seleccionados</v-btn>
+      <v-btn @click="showSelected">Descargar información </v-btn>
       <v-data-table
         :headers="headers"
         :items="items"
@@ -57,6 +57,15 @@
 
 <script>
 import CustomTable from "@/components/ui/CustomTable";
+
+const downloadCsv = (data) => {
+  var hiddenElement = document.createElement("a");
+  hiddenElement.href = "data:text/csv;charset=utf-8," + encodeURI(data);
+  hiddenElement.target = "_blank";
+  hiddenElement.download = "Empleados.csv";
+  hiddenElement.click();
+};
+
 export default {
   components: {
     "custom-table": CustomTable,
@@ -205,22 +214,22 @@ export default {
       this.userItem = item.user;
     },
     showSelected() {
+      if (this.selected.length === 0) {
+        alert("No se han seleccionado datos");
+        return;
+      }
       const array = [Object.keys(this.selected[0])].concat(this.selected);
       const csv = array
         .map((it) => {
           var data = Object.values(it)
             .map((value) => {
-              if (value instanceof Object) {
-                return JSON.stringify(value);
-              } else {
-                return value;
-              }
+              return value;
             })
             .toString();
           return data;
         })
         .join("\n");
-      console.log(csv);
+      downloadCsv(csv);
     },
   },
   computed: {

@@ -11,35 +11,46 @@
         <v-row>
           <v-col cols="6">
             <h3>Draggable 1</h3>
-            <draggable :list="list1" group="people" @change="log">
-              <v-sheet
-                class="ma-3"
-                elevation="2"
-                v-for="(element, index) in list1"
-                :key="element.name"
+            <div class="pa-1 grey lighten-5">
+              <draggable
+                :sort="false"
+                group="people"
+                :list="list1"
+                @change="log"
+                class="containerDrag"
               >
-                {{ element.name }} {{ index }}
-              </v-sheet>
-            </draggable>
+                <v-sheet
+                  class="ma-3 pa-2 rounded"
+                  elevation="2"
+                  v-for="(element, index) in list1"
+                  :key="element.name"
+                >
+                  <v-icon class="">mdi-bug</v-icon>
+                  {{ element.name }} {{ index }}
+                </v-sheet>
+              </draggable>
+            </div>
             <v-btn @click="pushAll">Pasar todos</v-btn>
           </v-col>
           <v-col cols="6">
             <h3>Draggable 2</h3>
-            <draggable
-              class="list-group"
-              :list="list2"
-              group="people"
-              @change="log"
-            >
-              <v-sheet
-                class="ma-3"
-                elevation="2"
-                v-for="(element, index) in list2"
-                :key="element.name"
+            <div class="pa-1 grey lighten-5">
+              <draggable
+                :sort="false"
+                group="people"
+                :list="list2"
+                @change="log"
               >
-                {{ element.name }} {{ index }}
-              </v-sheet>
-            </draggable>
+                <v-sheet
+                  class="ma-4 pa-2 rounded"
+                  elevation="2"
+                  v-for="(element, index) in list2"
+                  :key="element.name"
+                >
+                  {{ element.name }} {{ index }}
+                </v-sheet>
+              </draggable>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -67,16 +78,11 @@ export default {
     ],
   }),
   methods: {
-    log: function (evt) {
-      window.console.log(evt);
-      console.log("Tamaño lista1: " + this.list1.length);
-    },
+    log: function (evt) {},
     pushAll() {
-      console.log(this.list2.length);
       this.list1.forEach((item) => {
         this.list2.push(item);
       });
-      console.log(this.list2.length);
       this.list1 = [];
     },
   },
@@ -84,4 +90,16 @@ export default {
 </script>
 
 <style>
+.ghost {
+  opacity: 1.5;
+  background: #109ee0;
+}
+.containerDrag {
+  min-height: 50px;
+}
+.handle {
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 </style>

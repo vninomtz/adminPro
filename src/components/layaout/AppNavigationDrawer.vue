@@ -21,13 +21,13 @@
     <v-divider></v-divider>
 
     <v-list dense>
-      <v-list-item link to="dashboard/home">
+      <v-list-item link to="home">
         <v-list-item-icon>
           <v-icon>mdi-view-dashboard</v-icon>
         </v-list-item-icon>
         <v-list-item-title>Inicio</v-list-item-title>
       </v-list-item>
-      <v-list-item link>
+      <v-list-item link to="users">
         <v-list-item-icon>
           <v-icon>mdi-account-multiple</v-icon>
         </v-list-item-icon>

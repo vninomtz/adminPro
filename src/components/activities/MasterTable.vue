@@ -67,6 +67,7 @@ const downloadCsv = (data) => {
 };
 
 export default {
+  name: "MasterTable",
   components: {
     "custom-table": CustomTable,
   },
@@ -104,19 +105,19 @@ export default {
               name: "Javascript",
               level: "Senior",
               experience: "5 años",
-              salary: "30k",
+              salary: "30000.848",
             },
             {
               name: "Python",
               level: "Senior",
               experience: "4 años",
-              salary: "35k",
+              salary: "35000.524",
             },
             {
               name: "Go",
               level: "Junior",
               experience: "1 años",
-              salary: "25k",
+              salary: "23000.4558",
             },
           ],
         },

@@ -10,7 +10,7 @@
       <v-tabs-items v-model="tab">
         <v-tab-item v-for="item in tabs" :key="item.name">
           <keep-alive>
-            <component :is="item.value" />
+            <component :is="getComponent" />
           </keep-alive>
         </v-tab-item>
       </v-tabs-items>
@@ -18,9 +18,6 @@
   </v-container>
 </template>
 <script>
-const ToDoList = () => import("@/components/activities/ToDoList");
-const MasterTable = () => import("@/components/activities/MasterTable");
-
 export default {
   name: "UsersPage",
   components: {
@@ -28,21 +25,22 @@ export default {
       import("@/components/layaout/AppToolbarNavigation.vue"),
   },
   data: () => ({
-    tab: "",
+    tab: 0,
     tabs: [
       {
         name: "Todo",
-        value: ToDoList,
+        value: "ToDoList",
       },
       {
         name: "Master",
-        value: MasterTable,
+        value: "MasterTable",
       },
     ],
   }),
   computed: {
-    getComponent(name) {
-      return this.tab.name;
+    getComponent() {
+      var componentName = this.tabs[this.tab].value;
+      return () => import("@/components/activities/" + componentName);
     },
   },
 };

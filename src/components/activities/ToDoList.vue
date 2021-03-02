@@ -61,6 +61,7 @@
 <script>
 import draggable from "vuedraggable";
 export default {
+  name: "ToDoList",
   components: {
     draggable,
   },

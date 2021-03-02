@@ -2,8 +2,10 @@ import Vue from "vue";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import es from "vuetify/lib/locale/es";
+import VueMask from "v-mask";
 
 Vue.use(Vuetify);
+Vue.use(VueMask);
 
 export default new Vuetify({
   theme: {

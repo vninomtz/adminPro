@@ -8,7 +8,14 @@
       </div>
     </v-card-title>
     <v-card-text>
-      <v-btn @click="showSelected">Descargar información </v-btn>
+      <div class="ma-2">
+        <v-btn text class="mr-4 primary" @click="showSelected"
+          >Descargar en csv</v-btn
+        >
+        <v-btn text class="primary" @click="download"
+          >Descargar en excel
+        </v-btn>
+      </div>
       <v-data-table
         :headers="headers"
         :items="items"
@@ -57,6 +64,7 @@
 
 <script>
 import CustomTable from "@/components/ui/CustomTable";
+import XLSX from "xlsx";
 
 const downloadCsv = (data) => {
   var hiddenElement = document.createElement("a");
@@ -64,6 +72,13 @@ const downloadCsv = (data) => {
   hiddenElement.target = "_blank";
   hiddenElement.download = "Empleados.csv";
   hiddenElement.click();
+};
+const downloadExcel = (data, title) => {
+  var worksheet = XLSX.utils.json_to_sheet(data);
+  var new_workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(new_workbook, worksheet, "Hoja 1");
+  var name = `${title}.xlsb`;
+  XLSX.writeFile(new_workbook, name);
 };
 
 export default {
@@ -231,6 +246,13 @@ export default {
         })
         .join("\n");
       downloadCsv(csv);
+    },
+    download() {
+      if (this.selected.length === 0) {
+        alert("No se han seleccionado datos");
+        return;
+      }
+      downloadExcel(this.selected, "DatosEnExcel");
     },
   },
   computed: {

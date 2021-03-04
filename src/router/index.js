@@ -29,6 +29,12 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "user" */ "../views/UsersPage.vue"),
       },
+      {
+        path: "/dashboard/country",
+        name: "Paises",
+        component: () =>
+          import(/* webpackChunkName: "user" */ "../views/CountryPage.vue"),
+      },
     ],
   },
 ];

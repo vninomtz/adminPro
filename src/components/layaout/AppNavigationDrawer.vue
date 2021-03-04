@@ -33,11 +33,11 @@
         </v-list-item-icon>
         <v-list-item-title>Usuarios</v-list-item-title>
       </v-list-item>
-      <v-list-item link>
+      <v-list-item link to="country">
         <v-list-item-icon>
           <v-icon>mdi-finance</v-icon>
         </v-list-item-icon>
-        <v-list-item-title>Estadísticas</v-list-item-title>
+        <v-list-item-title>Paises</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>

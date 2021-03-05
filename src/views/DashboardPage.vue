@@ -12,7 +12,7 @@
 
 <script>
 import NavigationDrawer from "@/components/layaout/AppNavigationDrawer.vue";
-import Header from "@/components/layaout/AppHeader.vue";
+import Header from "@/components/layaout/AppHeaderPro.vue";
 import AppFooter from "@/components/layaout/AppFooter.vue";
 import AppConfig from "@/components/layaout/AppConfiguration.vue";
 export default {

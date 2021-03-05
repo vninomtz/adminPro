@@ -3,8 +3,7 @@
     v-model="select"
     :items="items"
     label="Combobox"
-    outlined
-    dense
+    class="0"
   ></v-combobox>
 </template>
 

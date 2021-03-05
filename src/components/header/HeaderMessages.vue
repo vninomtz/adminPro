@@ -8,7 +8,7 @@
   >
     <template v-slot:activator="{ on, attrs }">
       <v-btn icon v-bind="attrs" v-on="on" class="mx-2">
-        <v-badge content="3">
+        <v-badge dot>
           <v-icon>mdi-message</v-icon>
         </v-badge>
       </v-btn>

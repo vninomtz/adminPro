@@ -1,23 +1,25 @@
 <template>
   <v-app-bar app flat class="white">
-    <v-toolbar-title>Admin<strong>Pro</strong></v-toolbar-title>
-    <v-app-bar-nav-icon @click.stop="changeDrawer"></v-app-bar-nav-icon>
-    <div class="d-flex align-center justify-space-between">
-      <v-icon size="25" @click="showSearch = !showSearch">mdi-magnify</v-icon>
-      <div class="pa-3 mt-3">
-        <v-text-field
-          style="width: 300px"
-          v-if="showSearch"
-          clearable
-          @click:clear="showSearch = !showSearch"
-          flat
-        ></v-text-field>
+    <v-row align="center">
+      <v-toolbar-title>Admin<strong>Pro</strong></v-toolbar-title>
+      <v-app-bar-nav-icon @click.stop="changeDrawer"></v-app-bar-nav-icon>
+      <div class="d-flex align-center justify-space-between">
+        <v-icon size="25" @click="showSearch = !showSearch">mdi-magnify</v-icon>
+        <div class="pa-3 mt-3">
+          <v-text-field
+            style="width: 300px"
+            v-if="showSearch"
+            clearable
+            @click:clear="showSearch = !showSearch"
+            flat
+          ></v-text-field>
+        </div>
       </div>
-    </div>
-    <v-spacer></v-spacer>
-    <header-notifications></header-notifications>
-    <header-messages></header-messages>
-    <header-profile></header-profile>
+      <v-spacer></v-spacer>
+      <header-notifications></header-notifications>
+      <header-messages></header-messages>
+      <header-profile></header-profile>
+    </v-row>
   </v-app-bar>
 </template>
 
